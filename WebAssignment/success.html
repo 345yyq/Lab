@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookshop - Payment Successful</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">My Bookshop</a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container success-container">
+        <div class="success-card">
+            <!-- Success icon -->
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <!-- Success message -->
+            <h1>Payment Successful!</h1>
+            <p id="bookMessage">You have successfully entered your credit card details</p>
+            <!-- Card info with selected local logo -->
+            <div class="card-info">
+                <span>Debit / Credit Card</span>
+                <img id="selectedCardLogo" src="" alt="Selected Card Logo" class="card-logo">
+                <p>Your credit card number ends in <span id="maskedCard">**** **** **** 1234</span></p>
+            </div>
+            <!-- Back to homepage button -->
+            <a href="index.html" class="home-btn">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Import JavaScript for success page -->
+    <script src="./js/success.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookshop - Homepage</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Responsive Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo Area -->
+            <div class="logo">
+                <h1>My Bookshop</h1>
+            </div>
+            
+            <!-- Hamburger Button (Mobile Only) -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Book Display -->
+    <main class="container book-container">
+        <div class="book-grid">
+            <!-- Book Card 1: Jane Eyre -->
+            <div class="book-card">
+                <img src="./images/1.jpg" alt="Jane Eyre - Book Cover" class="book-img">
+                <div class="book-info">
+                    <h3>Jane Eyre</h3>
+                    <p>Charlotte Brontë's novel follows Jane's journey as she seeks love and independence in a society that restricts her.</p>
+                    <button class="pay-btn" onclick="redirectToPayment()">Pay</button>
+                </div>
+            </div>
+
+            <!-- Book Card 2: The Old Man and the Sea -->
+            <div class="book-card">
+                <img src="./images/2.jpg" alt="The Old Man and the Sea - Book Cover" class="book-img">
+                <div class="book-info">
+                    <h3>The Old Man and the Sea</h3>
+                    <p>Ernest Hemingway's tale of an old fisherman's struggle with a giant marlin, exploring endurance and pride.</p>
+                    <button class="pay-btn" onclick="redirectToPayment()">Pay</button>
+                </div>
+            </div>
+
+            <!-- Book Card 3: Gone with the Wind -->
+            <div class="book-card">
+                <img src="./images/3.jpg" alt="Gone with the Wind - Book Cover" class="book-img">
+                <div class="book-info">
+                    <h3>Gone with the Wind</h3>
+                    <p>Margaret Mitchell's epic set during the American Civil War, centering on Scarlett O'Hara's passion and resilience.</p>
+                    <button class="pay-btn" onclick="redirectToPayment()">Pay</button>
+                </div>
+            </div>
+
+            <!-- Book Card 4: Pride and Prejudice -->
+            <div class="book-card">
+                <img src="./images/4.jpg" alt="Pride and Prejudice - Book Cover" class="book-img">
+                <div class="book-info">
+                    <h3>Pride and Prejudice</h3>
+                    <p>Jane Austen's classic about Elizabeth Bennet and Mr. Darcy, exploring love and social class in 19th-century England.</p>
+                    <button class="pay-btn" onclick="redirectToPayment()">Pay</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Link homepage JavaScript -->
+    <script src="./js/home.js"></script>
+</body>
+</html>

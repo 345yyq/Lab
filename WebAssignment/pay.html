@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookshop - Payment</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">My Bookshop</a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Payment Form Section -->
+    <main class="container pay-container">
+        <!-- Card Type Selection Area -->
+        <div class="card-logos">
+            <span>Debit / Credit Card</span>
+            <button class="card-selector" data-logo="./images/a.jpg">
+                <img src="./images/a.jpg" alt="Card A" class="card-logo">
+            </button>
+            <button class="card-selector" data-logo="./images/b.jpg">
+                <img src="./images/b.jpg" alt="Card B" class="card-logo">
+            </button>
+            <button class="card-selector" data-logo="./images/c.jpg">
+                <img src="./images/c.jpg" alt="Card C" class="card-logo">
+            </button>
+            <button class="card-selector" data-logo="./images/d.jpg">
+                <img src="./images/d.jpg" alt="Card D" class="card-logo">
+            </button>
+        </div>
+
+        <!-- New: Hidden input to record card type selection status -->
+        <input type="hidden" id="isCardSelected" value="false">
+
+        <!-- Error/Success Notification Area -->
+        <div id="feedback" class="feedback"></div>
+        <!-- Credit Card Form -->
+        <form id="paymentForm" class="payment-form">
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                <small>Must start with 51-55 and be 16 digits</small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expMonth">Expiration Month</label>
+                    <select id="expMonth" name="expMonth" required>
+                        <option value="">Select Month</option>
+                        <option value="1">01 (Jan)</option>
+                        <option value="2">02 (Feb)</option>
+                        <option value="3">03 (Mar)</option>
+                        <option value="4">04 (Apr)</option>
+                        <option value="5">05 (May)</option>
+                        <option value="6">06 (Jun)</option>
+                        <option value="7">07 (Jul)</option>
+                        <option value="8">08 (Aug)</option>
+                        <option value="9">09 (Sep)</option>
+                        <option value="10">10 (Oct)</option>
+                        <option value="11">11 (Nov)</option>
+                        <option value="12">12 (Dec)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="expYear">Expiration Year</label>
+                    <select id="expYear" name="expYear" required>
+                        <option value="">Select Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">Security Code</label>
+                <input type="text" id="cvv" name="cvv" placeholder="XXX" required>
+                <small>(3 or 4 digit code normally on the back of your card)</small>
+            </div>
+
+            <button type="submit" class="submit-btn">Continue</button>
+        </form>
+    </main>
+
+    <!-- Import JavaScript for Payment Page -->
+    <script src="./js/pay.js"></script>
+</body>
+</html>
